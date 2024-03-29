@@ -1,0 +1,129 @@
+@font-face {
+    font-family: iconmoon;
+    src: url(../assets/FontFolder/icomoon.ttf);
+}
+
+@font-face {
+    font-family: helvetica;
+    src: url(../assets/FontFolder/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: monsorate;
+    src: url(../assets/FontFolder/Montserrat-Light.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* main{
+
+} */
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+#firstDiv{
+    display: flex;
+    justify-content: space-between;
+    font-family: monsorate;
+    font-size: 10px;
+    font-weight: 500;
+    width: 100%;
+    background-color: #EEEEEE;
+
+}
+
+#firstDiv > ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 6px 50px;
+}
+
+#firstDiv > ul > li{
+    cursor: pointer;
+}
+
+#navSecondDiv{
+    font-family: monsorate;
+    font-size: 9px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 50px 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.317);
+    background-color: #ffff;
+}
+
+#navSecondDiv > div{
+    display: flex;
+}
+
+#navSecondDiv > div > span:first-child{
+    scale: .6;
+    cursor: pointer;
+}
+
+#navSecondDiv > div > span:nth-child(2){
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2){
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#navSecondDiv > div:nth-child(2) > input{
+    background-color: #EEEEEE;
+    width: 22vw;
+    padding: 14px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#navSecondDiv > div:nth-child(2) > img{
+    cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2) > h2{
+    border-left: 1.5px solid black;
+    padding-left: 1pc;
+    cursor: pointer;
+}
+
+#navThirdDiv{
+    font-family: monsorate;
+    font-weight: 900;
+    padding: 20px;
+    background-color: #ffff;
+}
+
+#navThirdDiv > ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#navThirdDiv > ul > li{
+    cursor: pointer;
+}
+
+section{
+    background-color: aqua;
+    height: 300vh;
+}
