@@ -34,6 +34,8 @@ nav{
     z-index: 10;
 }
 
+
+
 #firstDiv{
     display: flex;
     justify-content: space-between;
@@ -42,8 +44,8 @@ nav{
     font-weight: 500;
     width: 100%;
     background-color: #EEEEEE;
-
 }
+
 
 #firstDiv > ul{
     list-style: none;
@@ -68,25 +70,60 @@ nav{
 
 #navSecondDiv > div{
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-#navSecondDiv > div > span:first-child{
+#navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
+    display: none;
+    scale: 2.3;
+}
+
+#navSecondDiv > div > span:nth-child(2){
     scale: .6;
     cursor: pointer;
 }
 
-#navSecondDiv > div > span:nth-child(2){
+#navSecondDiv > div > span:nth-child(1){
+    scale: 3;
+    cursor: pointer;
+    display: none;
+}
+
+#navSecondDiv > div > span:nth-child(3){
     display: flex;
     gap: 20px;
     align-items: center;
     cursor: pointer;
 }
 
-#navSecondDiv > div:nth-child(2){
-    display: flex;
-    gap: 20px;
-    align-items: center;
+@media all and (min-width: 600px) and (max-width: 1024px) {
+
+   
+
+    #navSecondDiv > div > span:nth-child(2) > img:first-child{
+        display: none;
+    }
+
+    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
+        display: block;
+    }
+
+    #navSecondDiv > div > span:nth-child(1){
+        scale: 3;
+        cursor: pointer;
+        display: block;
+    }
+
+    #navSecondDiv > div > span:nth-child(3){
+        display: none;
+    }
+
+
 }
+
+
+
 
 #navSecondDiv > div:nth-child(2) > input{
     background-color: #EEEEEE;
@@ -95,6 +132,8 @@ nav{
     border-radius: 5px;
     border: none;
 }
+
+
 
 #navSecondDiv > div:nth-child(2) > img{
     cursor: pointer;
@@ -108,19 +147,137 @@ nav{
 
 #navThirdDiv{
     font-family: monsorate;
+    font-size: medium;
     font-weight: 900;
-    padding: 20px;
+    padding: 20px 0px;
     background-color: #ffff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#navThirdDiv::-webkit-scrollbar{
+    display: none;
 }
 
 #navThirdDiv > ul{
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    overflow-x: auto;
+
+}
+
+#navThirdDiv > ul::-webkit-scrollbar{
+    display: none;
 }
 
 #navThirdDiv > ul > li{
     cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2) > #searchLogo{
+    display: none;
+}
+
+@media all and (min-width: 500px) and (max-width: 1024px ) {
+    #navSecondDiv{
+        padding: 15px 40px 15px 40px;
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media all and (min-width: 0px) and (max-width: 1024px) {
+    #navSecondDiv > div:nth-child(2) > input{
+        display: none;
+    } 
+    #navSecondDiv > div:nth-child(2) > h2{
+       display: none;
+    }
+
+    #navSecondDiv > div:nth-child(2) > #searchLogo{
+        display: block;
+    }
+
+    #firstDiv{
+        display: none;
+    }
+    #navSecondDiv > div > span:nth-child(2) > img:first-child{
+        display: none;
+    }
+ #navSecondDiv > div > span:nth-child(3){
+        display: none;
+    }
+    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
+        display: block;
+    }
+
+    #navSecondDiv > div > span:nth-child(1){
+        scale: 3;
+        cursor: pointer;
+        display: block;
+    }
+    #navSecondDiv > div:nth-child(2){
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    #navSecondDiv > div:first-child{
+        gap: 30px;
+    }
+    #navThirdDiv{
+        font-family: monsorate;
+        font-weight: 900;
+        padding: 20px;
+        background-color: #ffff;
+    }
+    #navThirdDiv{
+        font-family: monsorate;
+        font-size: small;
+        font-weight: 900;
+        padding: 20px 0px;
+        background-color: #ffff;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+    
+    #navThirdDiv > ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        gap: 50px;
+        overflow-x: auto;
+        padding: 0 50px 0 50px;
+    }
+    
+}
+
+@media all and (min-width: 0px) and (max-width: 500px) {
+    #navSecondDiv{
+        padding: 20px 15px;
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 10px;
+    }
+    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
+        scale: 1.8;
+    }
+    #navSecondDiv > div > span:nth-child(1){
+        scale: 2.5;
+    }
+    #navSecondDiv > div:first-child{
+        gap: 20px;
+    }
 }
 
 section{
