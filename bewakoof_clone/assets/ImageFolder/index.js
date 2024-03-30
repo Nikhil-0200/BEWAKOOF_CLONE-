@@ -1,8 +1,10 @@
 import slider1Peanut from "./Silder1Image/slider1Peanut.webp";
 import slider1Img from "./Silder1Image/slider1Img.gif";
-import slider1Img1 from "./Silder1Image/slider1Im1.gif";
-import slider1Img2 from "./Silder1Image/slider1Im2.gif";
-import slider1Img3 from "./Silder1Image/slider1Im3.gif";
+import slider1Img1 from "./Silder1Image/slider1Img1.gif";
+import slider1Img2 from "./Silder1Image/slider1Img2.png";
+import slider1Img3 from "./Silder1Image/slider1Img3.gif";
+import arrowLeft from "./Silder1Image/arrowLeft.png";
+import arrowRight from "./Silder1Image/arrowRight.png";
 
 import slider1BelowImg from "./Slider1Below/img.gif";
 import slider1BelowImg1 from "./Slider1Below/img1.webp";
@@ -29,15 +31,15 @@ import trendingImg11 from "./trendingImage/trendingImg11.webp";
 
 import slider2Img from "./Slider2Image/slider2Img.webp";
 import slider2Img1 from "./Slider2Image/slider2Img1.webp";
-import slider2Img2 from "./Slider2Image/slider2Img2.webp";
+import slider2Img2 from "./Slider2Image/slider2Img2.jpg";
 import slider2Img3 from "./Slider2Image/slider2Img3.webp";
 import slider2Img4 from "./Slider2Image/slider2Img4.webp";
-import slider2Img5 from "./Slider2Image/slider2Img5.webp";
+import slider2Img5 from "./Slider2Image/slider2Img5.jpg";
 
 import hotImg from "./HotImage/hotImg.jpg";
 import hotImg1 from "./HotImage/hotImg1.jpg";
 import hotImg2 from "./HotImage/hotImg2.jpg";
-import hotImg3 from "./HotImage/hotImg3.jpg";
+import hotImg3 from "./HotImage/hotImg3.gif";
 
 import catImg from "./CatImage/catImg.webp";
 import catImg1 from "./CatImage/catImg1.webp";
@@ -65,6 +67,8 @@ import footerBanner1 from "./BestImage/footerBanner1.webp";
 import footerBanner2 from "./BestImage/footerBanner2.jpg";
 
 export {
+  arrowLeft,
+  arrowRight,
   slider1Peanut,
   slider1Img,
   slider1Img1,
