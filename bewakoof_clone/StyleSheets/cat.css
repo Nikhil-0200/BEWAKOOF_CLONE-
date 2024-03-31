@@ -1,0 +1,59 @@
+#catFirstDiv{
+display: flex;
+justify-content: space-around;
+}
+
+.catImgDiv > img{
+    width: 100%;
+    height: 100%;
+}
+
+#accSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#accDiv{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.accImgDiv{
+    width: 210px;
+}
+
+.accImgDiv > img{
+    width: 100%;
+    height: 100%;
+}
+
+#accSection > h1{
+    font-family: monsorate;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+#bestBanner{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 0px;
+}
+
+.bestBannerImgDiv > img{
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (min-width: 0) and (max-width: 500px) {
+
+    #accSection > h1{
+        font-family: monsorate;
+        text-align: center;
+        padding: 5px 0px;
+        font-size: medium;
+    }
+}

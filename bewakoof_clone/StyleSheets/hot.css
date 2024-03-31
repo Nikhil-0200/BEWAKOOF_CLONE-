@@ -1,0 +1,58 @@
+@font-face {
+    font-family: monsorate;
+    src: url(../assets/FontFolder/Montserrat-Light.ttf);
+}   
+
+#hotDiv, #bestDiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10px;
+}
+
+.hotImgDiv > img{
+width: 100%;
+height: 100%;
+}
+
+.bestImgDiv > img{
+    width: 100%;
+    height: 100%;
+    }
+
+#hotSection > h1{
+    font-family: monsorate;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+#bestSection > h1{
+    font-family: monsorate;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+#hotFirst, #bestFirst{
+    margin-right: 5px;
+}
+
+#hotFirst1, #bestFirst1{
+    margin-left: 5px;
+}
+
+@media all and (min-width: 0) and (max-width: 500px) {
+
+    #hotSection > h1{
+        font-family: monsorate;
+        text-align: center;
+        padding: 5px 0px;
+        font-size: medium;
+    }
+
+    #bestSection > h1{
+        font-family: monsorate;
+        text-align: center;
+        padding: 5px 0px;
+        font-size: medium;
+    }
+}

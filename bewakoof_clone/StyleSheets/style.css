@@ -152,7 +152,7 @@ nav {
 }
 
 #Slider1Div,
-#Slider2Div {
+#Slider2Div, #Slider3Div {
   position: relative;
 }
 
@@ -167,7 +167,7 @@ nav {
   font-size: 50px;
 }
 
-#BtnSpan2 {
+#BtnSpan2, #BtnSpan3 {
   width: 95%;
   position: absolute;
   top: 55%;
@@ -192,7 +192,7 @@ nav {
 }
 
 #arrowLeft2,
-#arrowRight2 {
+#arrowRight2, #arrowRight3, #arrowLeft3  {
   z-index: 1;
   height: 50px;
   width: 50px;
@@ -219,7 +219,7 @@ nav {
   scroll-behavior: smooth;
 }
 
-#Slider2 {
+#Slider2, #Slider3 {
   width: 100%;
   z-index: -1;
   height: fit-content;
@@ -233,7 +233,7 @@ nav {
 }
 
 .imgDiv,
-.imgDiv2 {
+.imgDiv2, .imgDiv3 {
   width: 100%;
   height: 420px;
 }
@@ -244,6 +244,11 @@ nav {
 }
 
 .imgDiv2 > img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgDiv3 > img {
   width: 100%;
   height: 100%;
 }
@@ -303,6 +308,12 @@ nav {
   width: 100%;
 }
 
+#catSection > h1 {
+  font-family: monsorate;
+  text-align: center;
+  padding: 5px 0px;
+}
+
 #BeewakoofSection > h1 {
   font-family: monsorate;
   text-align: center;
@@ -338,7 +349,7 @@ nav {
   }
 
   #Slider1,
-  #Slider2 {
+  #Slider2, #Slider3 {
     grid-auto-columns: calc((100% / 2) - 5px);
   }
 
@@ -445,7 +456,7 @@ nav {
     margin: auto;
   }
 
-  #Slider2 {
+  #Slider2, #Slider3 {
     width: 100%;
     height: fit-content;
     position: relative;
@@ -463,6 +474,13 @@ nav {
   }
 
   #BeewakoofSection > h1 {
+    font-family: monsorate;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: medium;
+  }
+
+  #catSection > h1 {
     font-family: monsorate;
     text-align: center;
     padding: 5px 0px;
