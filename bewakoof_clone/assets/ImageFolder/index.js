@@ -28,6 +28,7 @@ import trendingImg8 from "./trendingImage/trendingImg8.webp";
 import trendingImg9 from "./trendingImage/trendingImg9.webp";
 import trendingImg10 from "./trendingImage/trendingImg10.webp";
 import trendingImg11 from "./trendingImage/trendingImg11.webp";
+import trendingBanner from "./trendingImage/TrendingBanner.webp";
 
 import slider2Img from "./Slider2Image/slider2Img.webp";
 import slider2Img1 from "./Slider2Image/slider2Img1.webp";
@@ -95,6 +96,7 @@ export {
   trendingImg9,
   trendingImg10,
   trendingImg11,
+  trendingBanner,
   slider2Img,
   slider2Img1,
   slider2Img2,

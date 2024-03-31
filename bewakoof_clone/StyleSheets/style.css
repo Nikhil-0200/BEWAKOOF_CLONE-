@@ -1,153 +1,399 @@
 @font-face {
-    font-family: iconmoon;
-    src: url(../assets/FontFolder/icomoon.ttf);
+  font-family: iconmoon;
+  src: url(../assets/FontFolder/icomoon.ttf);
 }
 
 @font-face {
-    font-family: helvetica;
-    src: url(../assets/FontFolder/Helvetica.ttf);
+  font-family: helvetica;
+  src: url(../assets/FontFolder/Helvetica.ttf);
 }
 
 @font-face {
-    font-family: monsorate;
-    src: url(../assets/FontFolder/Montserrat-Light.ttf);
+  font-family: monsorate;
+  src: url(../assets/FontFolder/Montserrat-Light.ttf);
 }
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-html, body{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-main{
-position: relative;
+main {
+  position: relative;
+  margin: auto;
 }
 
-nav{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
-
-
-#firstDiv{
-    display: flex;
-    justify-content: space-between;
-    font-family: monsorate;
-    font-size: 10px;
-    font-weight: 500;
-    width: 100%;
-    background-color: #EEEEEE;
+#firstDiv {
+  display: flex;
+  justify-content: space-between;
+  font-family: monsorate;
+  font-size: 10px;
+  font-weight: 500;
+  width: 100%;
+  background-color: #eeeeee;
 }
 
-
-#firstDiv > ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 6px 50px;
+#firstDiv > ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 6px 50px;
 }
 
-#firstDiv > ul > li{
-    cursor: pointer;
+#firstDiv > ul > li {
+  cursor: pointer;
 }
 
-#navSecondDiv{
-    font-family: monsorate;
-    font-size: 9px;
-    display: flex;
-    justify-content: space-between;
-    padding: 6px 50px 6px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.317);
-    background-color: #ffff;
+#navSecondDiv {
+  font-family: monsorate;
+  font-size: 9px;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 50px 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.317);
+  background-color: #ffff;
 }
 
-#navSecondDiv > div{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+#navSecondDiv > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-#navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
-    display: none;
-    scale: 2.3;
+#navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+  display: none;
+  scale: 2.3;
 }
 
-#navSecondDiv > div > span:nth-child(2){
-    scale: .6;
-    cursor: pointer;
+#navSecondDiv > div > span:nth-child(2) {
+  scale: 0.6;
+  cursor: pointer;
 }
 
-#navSecondDiv > div > span:nth-child(1){
-    scale: 3;
-    cursor: pointer;
-    display: none;
+#navSecondDiv > div > span:nth-child(1) {
+  scale: 3;
+  cursor: pointer;
+  display: none;
 }
 
-#navSecondDiv > div > span:nth-child(3){
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    cursor: pointer;
+#navSecondDiv > div > span:nth-child(3) {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2) > input {
+  background-color: #eeeeee;
+  width: 22vw;
+  padding: 14px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#navSecondDiv > div:nth-child(2) > img {
+  cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2) > h2 {
+  border-left: 1.5px solid black;
+  padding-left: 1pc;
+  cursor: pointer;
+}
+
+#navThirdDiv {
+  font-family: monsorate;
+  font-size: medium;
+  font-weight: 900;
+  padding: 20px 0px;
+  background-color: #ffff;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+#navThirdDiv::-webkit-scrollbar {
+  display: none;
+}
+
+#navThirdDiv > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+  overflow-x: auto;
+}
+
+#navThirdDiv > ul::-webkit-scrollbar {
+  display: none;
+}
+
+#navThirdDiv > ul > li {
+  cursor: pointer;
+}
+
+#navSecondDiv > div:nth-child(2) > #searchLogo {
+  display: none;
+}
+
+#Slider1Div,
+#Slider2Div {
+  position: relative;
+}
+
+#BtnSpan {
+  width: 95%;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+}
+
+#BtnSpan2 {
+  width: 95%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+}
+#arrowLeft,
+#arrowRight {
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  background-color: #f3f5fab1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 50px;
+}
+
+#arrowLeft2,
+#arrowRight2 {
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  background-color: #f3f5fab1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 50px;
+}
+
+#Slider1 {
+  width: 100%;
+  z-index: -1;
+  height: fit-content;
+  position: relative;
+  top: 140px;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 9px);
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+#Slider2 {
+  width: 100%;
+  z-index: -1;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 9px);
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.imgDiv,
+.imgDiv2 {
+  width: 100%;
+  height: 420px;
+}
+
+.imgDiv > img {
+  width: 100%;
+  height: 100%;
+}
+
+.imgDiv2 > img {
+  width: 100%;
+  height: 100%;
+}
+
+#Slider1Below {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  gap: 20px;
+  position: relative;
+  overflow-x: auto;
+  /* margin: 0px 100px ; */
+}
+
+#Slider1Below::-webkit-scrollbar {
+  display: none;
+}
+
+#Slider1BelowCard {
+  width: 130px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#Slider1BelowCard > #Slider1BelowImgDiv {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#Slider1BelowImgDiv > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#Slider1BelowCard > p {
+  text-align: center;
+  font-family: monsorate;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#Slider1BelowSection {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+#Slider1BelowBanner > img {
+  width: 100%;
+}
+
+#BeewakoofSection > h1 {
+  font-family: monsorate;
+  text-align: center;
+  padding: 5px 0px;
 }
 
 @media all and (min-width: 600px) and (max-width: 1024px) {
+  #navSecondDiv > div > span:nth-child(2) > img:first-child {
+    display: none;
+  }
 
-   
+  #navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+    display: block;
+  }
 
-    #navSecondDiv > div > span:nth-child(2) > img:first-child{
-        display: none;
-    }
-
-    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
-        display: block;
-    }
-
-    #navSecondDiv > div > span:nth-child(1){
-        scale: 3;
-        cursor: pointer;
-        display: block;
-    }
-
-    #navSecondDiv > div > span:nth-child(3){
-        display: none;
-    }
-
-
-}
-
-
-
-
-#navSecondDiv > div:nth-child(2) > input{
-    background-color: #EEEEEE;
-    width: 22vw;
-    padding: 14px 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-
-
-#navSecondDiv > div:nth-child(2) > img{
+  #navSecondDiv > div > span:nth-child(1) {
+    scale: 3;
     cursor: pointer;
+    display: block;
+  }
+
+  #navSecondDiv > div > span:nth-child(3) {
+    display: none;
+  }
 }
 
-#navSecondDiv > div:nth-child(2) > h2{
-    border-left: 1.5px solid black;
-    padding-left: 1pc;
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  #navSecondDiv {
+    padding: 15px 40px 15px 40px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+  }
+
+  #Slider1,
+  #Slider2 {
+    grid-auto-columns: calc((100% / 2) - 5px);
+  }
+
+  #Slider1Below {
+    margin: 0px 30px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 1024px) {
+  #navSecondDiv > div:nth-child(2) > input {
+    display: none;
+  }
+  #navSecondDiv > div:nth-child(2) > h2 {
+    display: none;
+  }
+
+  #navSecondDiv > div:nth-child(2) > #searchLogo {
+    display: block;
+  }
+
+  #firstDiv {
+    display: none;
+  }
+  #navSecondDiv > div > span:nth-child(2) > img:first-child {
+    display: none;
+  }
+  #navSecondDiv > div > span:nth-child(3) {
+    display: none;
+  }
+  #navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+    display: block;
+  }
+
+  #navSecondDiv > div > span:nth-child(1) {
+    scale: 3;
     cursor: pointer;
-}
-
-#navThirdDiv{
+    display: block;
+  }
+  #navSecondDiv > div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  #navSecondDiv > div:first-child {
+    gap: 30px;
+  }
+  #navThirdDiv {
     font-family: monsorate;
-    font-size: medium;
+    font-weight: 900;
+    padding: 20px;
+    background-color: #ffff;
+  }
+  #navThirdDiv {
+    font-family: monsorate;
+    font-size: small;
     font-weight: 900;
     padding: 20px 0px;
     background-color: #ffff;
@@ -156,226 +402,70 @@ nav{
     left: 0;
     white-space: nowrap;
     overflow-x: auto;
-}
+  }
 
-#navThirdDiv::-webkit-scrollbar{
-    display: none;
-}
-
-#navThirdDiv > ul{
+  #navThirdDiv > ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
-    width: 100%;
+    gap: 50px;
     overflow-x: auto;
-
-}
-
-#navThirdDiv > ul::-webkit-scrollbar{
-    display: none;
-}
-
-#navThirdDiv > ul > li{
-    cursor: pointer;
-}
-
-#navSecondDiv > div:nth-child(2) > #searchLogo{
-    display: none;
-}
-
-@media all and (min-width: 500px) and (max-width: 1024px ) {
-    #navSecondDiv{
-        padding: 15px 40px 15px 40px;
-        z-index: 10;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        margin-bottom: 10px;
-    }
-}
-
-
-
-@media all and (min-width: 0px) and (max-width: 1024px) {
-    #navSecondDiv > div:nth-child(2) > input{
-        display: none;
-    } 
-    #navSecondDiv > div:nth-child(2) > h2{
-       display: none;
-    }
-
-    #navSecondDiv > div:nth-child(2) > #searchLogo{
-        display: block;
-    }
-
-    #firstDiv{
-        display: none;
-    }
-    #navSecondDiv > div > span:nth-child(2) > img:first-child{
-        display: none;
-    }
- #navSecondDiv > div > span:nth-child(3){
-        display: none;
-    }
-    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
-        display: block;
-    }
-
-    #navSecondDiv > div > span:nth-child(1){
-        scale: 3;
-        cursor: pointer;
-        display: block;
-    }
-    #navSecondDiv > div:nth-child(2){
-        display: flex;
-        gap: 20px;
-        align-items: center;
-    }
-    #navSecondDiv > div:first-child{
-        gap: 30px;
-    }
-    #navThirdDiv{
-        font-family: monsorate;
-        font-weight: 900;
-        padding: 20px;
-        background-color: #ffff;
-    }
-    #navThirdDiv{
-        font-family: monsorate;
-        font-size: small;
-        font-weight: 900;
-        padding: 20px 0px;
-        background-color: #ffff;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        white-space: nowrap;
-        overflow-x: auto;
-    }
-    
-    #navThirdDiv > ul{
-        display: flex;
-        list-style: none;
-        justify-content: space-around;
-        gap: 50px;
-        overflow-x: auto;
-        padding: 0 50px 0 50px;
-    }
-    
+    padding: 0 50px 0 50px;
+  }
 }
 
 @media all and (min-width: 0px) and (max-width: 500px) {
-    #navSecondDiv{
-        padding: 20px 15px;
-        z-index: 10;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        margin-bottom: 10px;
-    }
-    #navSecondDiv > div > span:nth-child(2) > img:nth-child(2){
-        scale: 1.8;
-    }
-    #navSecondDiv > div > span:nth-child(1){
-        scale: 2.5;
-    }
-    #navSecondDiv > div:first-child{
-        gap: 20px;
-    }
-}
-
-/* section{
-    background-color: aqua;
-} */
-
-#arrowLeft, #arrowRight{
-    z-index: 1;
-    height: 20px;
-    background-color: #f3f5fab1;
-    border-radius: 50%;
-    font-size: 50px;
-}
-
-#arrowLeft{
-    position: relative;
-    bottom: 130px;
-    left: 1.5%;
-}
-
-
-#arrowRight{
-    position: relative;
-    bottom: 130px;
-    left: 90%;
-}
-
-#Slider1{
-    background-color: aliceblue;
+  #navSecondDiv {
+    padding: 20px 15px;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 10px;
+  }
+  #navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+    scale: 1.8;
+  }
+  #navSecondDiv > div > span:nth-child(1) {
+    scale: 2.5;
+  }
+  #navSecondDiv > div:first-child {
+    gap: 20px;
+  }
+  #Slider1 {
     width: 100%;
-    z-index: -1;
+    /* z-index: -1; */
     height: fit-content;
     position: relative;
     top: 140px;
     overflow: hidden;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 9px);
+    grid-auto-columns: calc((100% / 1) - 15px);
     gap: 20px;
     scroll-behavior: smooth;
-}
+    margin: auto;
+  }
 
-.imgDiv{
-    width: 420px;
-    height: 420px;
-}
- 
-.imgDiv > img{
+  #Slider2 {
     width: 100%;
-    height: 100%;
-} 
-
-#Slider1Below{
-width: 100%;
-display: flex;
-justify-content: center;
-gap: 20px;
-padding: 10px 0;
-position: relative;
-
-}
-
-#Slider1BelowCard{
-    width: 130px;
+    height: fit-content;
+    position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1) - 15px);
     gap: 20px;
-}
+    scroll-behavior: smooth;
+    margin: auto;
+  }
 
-#Slider1BelowCard > #Slider1BelowImgDiv{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+  #Slider1Below {
+    margin: 0px 10px;
+  }
 
-#Slider1BelowImgDiv > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-#Slider1BelowCard > p{
-    text-align: center;
+  #BeewakoofSection > h1 {
     font-family: monsorate;
-    font-size: 11px;
-    font-weight: 600;
-}
-
-#Slider1BelowSection{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-#Slider1BelowBanner > img{
-    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: medium;
+  }
 }

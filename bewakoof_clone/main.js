@@ -1,6 +1,7 @@
 import Slider1Data from "./HomePage/Slider1";
 import Slider1BelowData from "./HomePage/Slider1Below";
 
+
 const Slider1 = document.getElementById("Slider1");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
@@ -18,7 +19,7 @@ Slider1Data.forEach((ele) => {
 const imgDivWidth = Slider1.querySelector(".imgDiv").offsetWidth + 20;
 
 arrowLeft.addEventListener("click", () => {
-  Slider1.scrollLeft -= imgDivWidth;
+  Slider1.scrollLeft -= imgDivWidth;  
 });
 
 arrowRight.addEventListener("click", () => {

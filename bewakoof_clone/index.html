@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bewakoof Clone</title>
     <link rel="stylesheet" href="./StyleSheets/style.css" />
+    <link rel="stylesheet" href="StyleSheets/trending.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -77,9 +78,19 @@
         </div>
       </nav>
 
-      <section id="Slider1"></section>
-      <i id="arrowLeft" class="ri-arrow-left-s-line"></i>
-      <i id="arrowRight" class="ri-arrow-right-s-line"></i>
+      <div id="Slider1Div">
+        <section id="Slider1">
+      </section>
+      <span id="BtnSpan">
+          <button id="arrowLeft">
+        <i  class="ri-arrow-left-s-line"></i>
+          </button>
+
+          <button id="arrowRight">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+      </span>
+      </div>
 
       <section id="Slider1BelowSection">
         <div id="Slider1Below">
@@ -89,7 +100,40 @@
           <img src="./assets/ImageFolder/Slider1Below/slider1Banner.gif" alt="slider1Banner">
         </div>
       </section>
+
+      <section id="TrendingDiv">
+        <h1>TRENDING CATEGORIES</h1>
+
+        <div id="TrendingImages">
+        </div>
+        <div id="TrendingBannerImg">
+          <img src="./assets/ImageFolder/trendingImage/TrendingBanner.webp" alt="">
+        </div>
+      </section>
+
+      <section id="BeewakoofSection">
+        <h1>Bewakoof Originals</h1>
+
+        <div id="Slider2Div">
+          <section id="Slider2">
+            
+        </section>
+
+        <span id="BtnSpan2">
+          <button id="arrowLeft2">
+        <i  class="ri-arrow-left-s-line"></i>
+          </button>
+
+          <button id="arrowRight2">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+      </span>
+        
+        </div>
+      </section>
     </main>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/trending.js"></script>
+    <script type="module" src="/slider2.js"></script>
   </body>
 </html>
