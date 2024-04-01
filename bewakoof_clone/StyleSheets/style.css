@@ -91,7 +91,7 @@ nav {
 
 #navSecondDiv > div > span:nth-child(3) {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   align-items: center;
   cursor: pointer;
 }
@@ -113,6 +113,15 @@ nav {
   padding-left: 1pc;
   cursor: pointer;
 }
+
+#hoverDiv{
+  width: 90%;
+  height: 100vh;
+  background-color: #ffff;
+  margin: auto;
+  display: none;
+}
+
 
 #navThirdDiv {
   font-family: monsorate;
