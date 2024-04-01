@@ -11,10 +11,11 @@ const hoverH2 = document.querySelectorAll(
 );
 const hoverDiv = document.getElementById("hoverDiv");
 
-console.log(hoverH2);
+hoverDiv.style.display = "none"
 
 hoverH2.forEach((ele, i) => {
   ele.addEventListener("mouseenter", () => {
+    
     hoverDiv.innerHTML = "";
     if (i === 0) {
       hoverDiv.style.display = "block";
@@ -25,6 +26,7 @@ hoverH2.forEach((ele, i) => {
         let hoverDataCardLinks = document.createElement("div");
         ele.links.forEach((name) => {
           let linkText = document.createElement("links");
+          linkText.id = "linkText";
           hoverDataCardLinks.className = "hoverDataCardLinks";
           linkText.textContent = name.name;
           hoverDataCardLinks.append(linkText);
@@ -44,8 +46,8 @@ hoverH2.forEach((ele, i) => {
         let hoverDataCardLinks = document.createElement("div");
         hoverDataCardLinks.className = "hoverDataCardLinks";
         ele.links.forEach((name) => {
-          let linkText = document.createElement("p");
-
+          let linkText = document.createElement("links");
+          linkText.id = "linkText";
           linkText.textContent = name.name;
           hoverDataCardLinks.append(linkText);
         });
@@ -65,7 +67,7 @@ hoverH2.forEach((ele, i) => {
         hoverDataCardLinks.className = "hoverDataCardLinks";
         ele.links.forEach((name) => {
           let linkText = document.createElement("links");
-
+          linkText.id = "linkText";
           linkText.textContent = name.name;
           hoverDataCardLinks.append(linkText);
         });
@@ -76,8 +78,11 @@ hoverH2.forEach((ele, i) => {
         hoverDiv.append(hoverDataCard);
       });
     }
+    
   });
+  
 });
+
 
 hoverH2.forEach((ele) => {
   ele.addEventListener("mouseleave", () => {
