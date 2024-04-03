@@ -74,7 +74,7 @@ nav {
   gap: 20px;
 }
 
-#navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+#navSecondDiv > div > span:nth-child(2) > a > img:nth-child(2) {
   display: none;
   scale: 2.3;
 }
@@ -527,4 +527,9 @@ nav {
     padding: 5px 0px;
     font-size: medium;
   }
+}
+
+
+#menNav > h2 > a{
+  text-decoration-line: none;
 }
