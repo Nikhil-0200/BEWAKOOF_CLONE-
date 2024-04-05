@@ -56,12 +56,15 @@ async function singleData() {
     let rightSection = document.getElementById("rightSection");
 
     let rightFirstUprDiv = document.createElement("div");
+    rightFirstUprDiv.id = "rightFirstUprDiv"
 
     let brandName = document.createElement("h1");
     brandName.textContent = ele.brandName;
+    brandName.id = "brandName"
 
     let productName1 = document.createElement("h2");
     productName1.textContent = ele.productName;
+    productName1.id = "productName1";
 
     let ratingSpan = document.createElement("span");
     ratingSpan.className = "ratingSpan1";
@@ -78,29 +81,39 @@ async function singleData() {
 
     let price = document.createElement("h1");
     price.textContent = ele.price;
+    price.id = "price";
 
     let priceSub = document.createElement("p");
     priceSub.textContent = "inclusive of all taxes";
+    priceSub.id = "priceSub";
 
     let subTitle = document.createElement("h4");
     subTitle.textContent = ele.subTitle;
+    subTitle.id = "subTitle"
 
     let rightSecondUprDiv = document.createElement("p");
     rightSecondUprDiv.textContent = "TriBe members get an extra discount of ₹70 and FREE shipping.Learn more";
+    rightSecondUprDiv.id = "rightSecondUprDiv"
+
 
     let sizeDiv = document.createElement("div");
+    sizeDiv.id = "sizeDiv";
 
     let sizeDivHeading = document.createElement("div");
+    sizeDivHeading.id = "sizeDivHeading"
 
     let sizeHeading = document.createElement("h3");
-    sizeHeading.textContent = "SELECT SIZE"
+    sizeHeading.textContent = "SELECT SIZE";
+    sizeHeading.className = "sizeHead";
 
     let sizeGuide = document.createElement("h3");
     sizeGuide.textContent = "Size Guide"
+    sizeGuide.className = "sizeHead"
 
   let sizeArr = ["S", "M", "L", "XL", "2XL"];
 
   let btnDiv = document.createElement("div");
+  btnDiv.id = "btnDiv"
 
   sizeArr.forEach((ele)=>{
     let sizeBtn = document.createElement("button");
@@ -111,6 +124,7 @@ async function singleData() {
   })
 
   let addToCartDiv = document.createElement("div");
+  addToCartDiv.id = "addToCartDiv"
 
   let addToCartBtn = document.createElement("button");
   addToCartBtn.textContent = "ADD TO BAG"

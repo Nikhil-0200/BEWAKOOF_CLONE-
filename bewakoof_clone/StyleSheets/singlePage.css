@@ -67,6 +67,126 @@ main{
 }
 
 #rightSection{
-    width: 50%;
+    width: fit-content;
     border: 2px solid blueviolet;   
+}
+
+#rightFirstUprDiv{
+    line-height: 27px;
+}
+
+#brandName{
+    font-size: large;
+    font-weight: lighter;
+}
+
+#productName1{
+    font-size: medium;
+    color: rgba(0, 0, 0, 0.708);
+}
+
+
+.ratingSpan1{
+    height:17px;
+    width: min-content;
+    border: 1px solid black;
+    background-color: #F7F7F7;
+    padding: 4px 5px;
+    font-size: small;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+    align-items: center;
+    margin-top: 10px;  
+    margin-bottom: 14px;  
+}
+
+.ratingStar1{
+    /* width: 100%; */
+    scale: .6;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+.rating{
+    font-size: smaller;
+}
+
+#price{
+    font-weight: lighter;
+}
+
+#priceSub{
+    line-height: normal;
+    font-size: small;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.708);
+}
+
+#subTitle{
+    border: 1px solid black;
+    width: fit-content;
+    font-size: small;
+    font-weight: lighter;
+    padding: 1px 5px;
+    line-height: 150%;
+    margin: 10px 0px;
+}
+
+#rightSecondUprDiv{
+    width: fit-content;
+    font-size: small;
+    padding: 15px 10px 15px 0px;
+    border-top: 4px solid #EEEEEE;
+    border-bottom: 4px solid #EEEEEE;
+    margin: 20px 0px;
+}
+
+#sizeDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px 0px 13px 0px;
+    border-bottom: 4px solid #EEEEEE;
+}
+
+#sizeDivHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sizeHead{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+#btnDiv > button{
+    width: 10%;
+    padding: 15px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+#addToCartDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#addToCartDiv > button:nth-child(1){
+    width: 52%;
+    padding: 14px;
+    background-color: #FFD84D;
+    border: none;
+    border-radius: 2px;
+}
+
+#addToCartDiv > button:nth-child(2){
+    width: 45%;
+    background: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 2px;
+
 }
