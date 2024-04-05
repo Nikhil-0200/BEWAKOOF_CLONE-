@@ -1,8 +1,7 @@
 import {starLine} from "../assets/IconFolder/index"
 
-
 let API =
-  "https://script.google.com/macros/s/AKfycbwgymVYzPIaPaRXhbwccuSclT_I3UVpFY8jDsg1qYBiX30YS0J0iX-G-0Hv8Eu-aVj-lA/exec";
+  "https://script.google.com/macros/s/AKfycbxCG90fekKd3afSynvi3JoCdyZG3nku--QWil_XpEQD_fMRjdY7f2ey6uUAgTHnQKdlYA/exec";
 
 const cardDiv = document.getElementById("cardDiv");
 
@@ -10,11 +9,14 @@ async function fetchData() {
   let res = await fetch(API);
   let finalData = await res.json();
 
-  console.log(finalData);
+  // console.log(finalData);
 
   finalData.data.forEach((ele) => {
     let itemCard = document.createElement("div");
     itemCard.className = "itemCard";
+    itemCard.addEventListener("click", ()=>{
+      window.location.href = `singlePage.html?id=${ele.id}`
+    })
 
     let imgDiv = document.createElement("div");
     imgDiv.className = "imgDiv";
