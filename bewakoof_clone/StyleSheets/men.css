@@ -44,9 +44,25 @@ padding: 10px 0px;
 border-bottom: 2px solid rgb(153, 205, 50)
 }
 
+#sortSpan{
+    position: absolute;
+    top: -.4%;
+    right: 0;
+    font-size: small;
+    display: flex;
+    gap: 10px;
+}
+
+#sortSpan > select{
+   border: none;
+   outline: none;
+}
+
 #menItemSection{
     width: 100%;
     border: 2px solid red;
+    position: relative;
+    /* background-color: aqua; */
     display: flex;
     margin-top: 150px;
     justify-content: space-between;

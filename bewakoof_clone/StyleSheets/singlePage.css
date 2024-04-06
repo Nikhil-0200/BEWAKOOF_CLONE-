@@ -28,17 +28,17 @@ main{
 #singleMain{
     position: relative;
     top: 150px; 
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 #leftSection{
     width: 50%;
     display: flex;
     flex-direction: row-reverse;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 #bigImageDiv{
@@ -52,7 +52,7 @@ main{
 
 #multipleSmallImgDiv{
     width: 30%;
-    border: 2px solid slateblue;
+    /* border: 2px solid slateblue; */
 }
 
 #smallImageDiv{
@@ -68,7 +68,7 @@ main{
 
 #rightSection{
     width: fit-content;
-    border: 2px solid blueviolet;   
+    /* border: 2px solid blueviolet;    */
 }
 
 #rightFirstUprDiv{
@@ -139,14 +139,14 @@ main{
     padding: 15px 10px 15px 0px;
     border-top: 4px solid #EEEEEE;
     border-bottom: 4px solid #EEEEEE;
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 
 #sizeDiv{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 0px 0px 13px 0px;
+    padding: 0px 0px 30px 0px;
     border-bottom: 4px solid #EEEEEE;
 }
 
