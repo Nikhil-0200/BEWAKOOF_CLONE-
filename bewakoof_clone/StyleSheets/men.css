@@ -60,7 +60,7 @@ border-bottom: 2px solid rgb(153, 205, 50)
 
 #menItemSection{
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     position: relative;
     /* background-color: aqua; */
     display: flex;
@@ -72,9 +72,6 @@ border-bottom: 2px solid rgb(153, 205, 50)
 #filterDiv{
     width: 28%;
     height: auto;
-    position: sticky;
-    top: 15%;
-    /* border: 2px solid black; */
 }
 
 .itemCard{
@@ -84,7 +81,7 @@ border-bottom: 2px solid rgb(153, 205, 50)
 
 #cardDiv{
     width: 85%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;

@@ -5,6 +5,12 @@ import Slider1BelowData from "./HomePage/Slider1Below";
 const Slider1 = document.getElementById("Slider1");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
+const userName = document.getElementById("userName");
+
+let name = JSON.parse(localStorage.getItem("setUserName"))
+
+
+userName.textContent = name
 
 Slider1Data.forEach((ele) => {
   let imgDiv = document.createElement("div");

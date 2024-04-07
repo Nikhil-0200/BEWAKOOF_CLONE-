@@ -1,0 +1,84 @@
+@font-face {
+    font-family: helvetica;
+    src: url(../assets/FontFolder/Helvetica.ttf);
+  }
+  
+  @font-face {
+    font-family: monsorate;
+    src: url(../assets/FontFolder/Montserrat-Light.ttf);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monsorate;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    top: 20%;
+    padding: 0px 50px;
+    /* background-color: red; */
+}
+
+#loginSection{
+    font-size: medium;
+    text-align: center;
+}
+
+#loginSection > h1{
+    font-weight: 600;
+}
+
+#loginSection > h3{
+font-weight: 100;
+padding: 30px 0px 50px 0px;
+}
+
+form{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    gap: 70px;
+}
+
+form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+form > div > input{
+    font-size: large;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    line-height: 30px;
+}
+
+form > #forgetDiv {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+form > #forgetDiv > a {
+    text-decoration: none;
+}
+
+form > button{
+    padding: 18px 0px;
+    font-size: larger;
+    background-color: #9f9f9f;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}

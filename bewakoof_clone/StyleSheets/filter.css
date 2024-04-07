@@ -1,12 +1,20 @@
+
 .heading{
     border-top: 1px solid #eeeeeef9;
     border-bottom: 1px solid #eeeeeef9;
     padding: 10px 0px;
     font-size: medium;
+    width: 100%;
+    font-weight: 600;
 }
 
 .underHeading{
-    border:  2px solid black;
-    background-color: red;
     display: none;
+    padding: 10px 0px 10px 30px ;
+}
+
+.optionPara{
+    font-size: small;
+    padding: 8px 0px;
+    font-weight: lighter;
 }

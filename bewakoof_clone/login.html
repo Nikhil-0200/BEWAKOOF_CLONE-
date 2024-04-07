@@ -1,16 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="StyleSheets/style.css" />
-    <link rel="stylesheet" href="StyleSheets/men.css" />
-    <link rel="stylesheet" href="StyleSheets/filter.css">
     <title>Document</title>
+    <link rel="stylesheet" href="StyleSheets/style.css" />
+    <link rel="stylesheet" href="StyleSheets/login.css">
   </head>
   <body>
     <nav>
@@ -51,7 +47,7 @@
             type="text"
             placeholder="search by product, category or collection"
           />
-          <a href="signUp.html"><h2>Login</h2></a>
+          <h2>Login</h2>
           <img
             id="searchLogo"
             src="./assets/IconFolder/searchLogo.svg"
@@ -64,29 +60,26 @@
       </div>
     </nav>
     <main>
-      <section id="menHeading">
-        <h3>Home&nbsp; &nbsp;/&nbsp; &nbsp; Men Clothing</h3>
+        <section id="loginSection">
+            <h1>Login in to your account</h1>
+            <h3>
+            </h3>
+        </section>
+        <form type="submit">
+            <div>
+            <input type="email" placeholder="Email" id="loginEmail">
+            <input type="password" id="loginPassword" placeholder="Password">
+            </div>
+            
+<section id="forgetDiv">
+    <a href="#">Forget Password?</a>
+    <a href="signUp.html">Sign Up</a>
+</section>
 
-        <span>Men Clothing</span>
-      </section>
-      <section id="menItemSection">
-        <span id="sortSpan">
-          <label for="">SORT BY</label>
-          <select id="sort">
-            <option value="Popular">Popular</option>
-            <option value="New">New</option>
-            <option value="High to Low">Price: High to Low</option>
-            <option value="Low to High">Price: Low to High</option>
-          </select>
-        </span>
-        <div id="filterDiv"></div>
-        <div id="cardDiv"></div>
-      </section>
+            <button type="submit">LOGIN</button>
+        </form>
     </main>
-
     <script type="module" src="hover.js"></script>
-    <script type="module" src="main.js"></script>
-    <script type="module" src="menJSFolder/men.js"></script>
-    <script type="module" src="filter.js"></script>
+    <script src="LoginJSFolder/login.js"></script>
   </body>
 </html>
