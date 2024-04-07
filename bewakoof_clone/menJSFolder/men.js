@@ -1,4 +1,5 @@
 import { starLine } from "../assets/IconFolder/index";
+import data from "../filter"
 
 let API =
   "https://script.google.com/macros/s/AKfycbxCG90fekKd3afSynvi3JoCdyZG3nku--QWil_XpEQD_fMRjdY7f2ey6uUAgTHnQKdlYA/exec";
@@ -9,6 +10,7 @@ const sort = document.querySelector("#sort");
 async function fetchData() {
   let res = await fetch(API);
   let finalData = await res.json();
+
 
   // console.log(sort);
 
@@ -105,14 +107,46 @@ fetchData();
 
 const filterDiv = document.getElementById("filterDiv");
 
-let heading = document.createElement("h1");
-let heading2 = document.createElement("h1");
-let heading3 = document.createElement("h1");
-let heading4 = document.createElement("h1");
 
-heading.textContent = "Hello";
-heading2.textContent = "Nikhil";
-heading3.textContent = "Karan";
-heading4.textContent = "Aman";
+data.listedData().forEach((filterHead)=>{
+  let heading = document.createElement("div");
 
-filterDiv.append(heading, heading2, heading3, heading4);
+  for(let key in filterHead){
+    heading.textContent = key
+    heading.className = "heading";
+
+    heading.addEventListener("click", controlDropDown)
+
+    let underHeading = document.createElement("div");
+    underHeading.className = "underHeading";
+
+   filterHead[key].forEach((ele)=>{
+    let optionPara = document.createElement("p");
+    optionPara.className = "optionPara";
+    optionPara.textContent = ele;
+    underHeading.appendChild(optionPara)
+   })
+
+    heading.append(underHeading)
+  }
+
+  let status = "closed";
+
+  function controlDropDown(){
+    let underHeadingControl = heading.querySelector(".underHeading")
+  
+    if(status === "closed"){
+      underHeadingControl.style.display = "block"
+      console.log("opened");
+      status = "opened"
+    }
+    else if(status === "opened"){
+      underHeadingControl.style.display = "none";
+      console.log(closed);
+      status = "closed"
+    }
+  }
+
+  filterDiv.append(heading);
+})
+

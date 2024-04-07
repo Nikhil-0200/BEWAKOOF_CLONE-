@@ -71,10 +71,10 @@ border-bottom: 2px solid rgb(153, 205, 50)
 
 #filterDiv{
     width: 28%;
-    height: 100vh;
+    height: auto;
     position: sticky;
     top: 15%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .itemCard{

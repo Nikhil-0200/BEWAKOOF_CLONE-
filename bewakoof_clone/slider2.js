@@ -2,7 +2,6 @@ import Slider2Data from "./HomePage/Slider2";
 
 const Slider2 = document.getElementById("Slider2");
 const arrowLeft2 = document.getElementById("arrowLeft2");
-console.log(arrowLeft);
 const arrowRight2 = document.getElementById("arrowRight2");
 
 Slider2Data.forEach((ele) => {

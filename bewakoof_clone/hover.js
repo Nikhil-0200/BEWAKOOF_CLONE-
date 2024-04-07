@@ -4,8 +4,6 @@ import {
   hoverMobData,
 } from "./HomePage/hoverData";
 
-console.log(hoverMenData, hoverWomenData, hoverMobData);
-
 const hoverH2 = document.querySelectorAll(
   "#navSecondDiv > div > span:nth-child(3) > h2"
 );
