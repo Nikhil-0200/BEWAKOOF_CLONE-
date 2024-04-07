@@ -6,11 +6,28 @@ const Slider1 = document.getElementById("Slider1");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
 const userName = document.getElementById("userName");
+const loginText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(2)")
+const logoutText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(3)")
 
 let name = JSON.parse(localStorage.getItem("setUserName"))
 
+if(name){
+loginText.style.display = "none"
+logoutText.style.display = "block"
+}
+else{
+loginText.style.display = "block"
+logoutText.style.display = "none"
+}
 
 userName.textContent = name
+
+logoutText.addEventListener("click", (e)=>{
+  e.preventDefault()
+  localStorage.removeItem("setUserName")
+  window.location.href="signUp.html"
+  alert("Logout Successfully")
+})
 
 Slider1Data.forEach((ele) => {
   let imgDiv = document.createElement("div");

@@ -115,6 +115,10 @@ nav {
   cursor: pointer;
 }
 
+/* #navSecondDiv > div:nth-child(2) > a:nth-child(2){
+  background-color: red;
+} */
+
 #hoverDiv{
   width: 90%;
   height: 80vh;
