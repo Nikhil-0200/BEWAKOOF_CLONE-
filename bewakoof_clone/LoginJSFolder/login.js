@@ -3,6 +3,7 @@ const loginEmail = document.querySelector("#loginEmail");
 const loginPassword = document.querySelector("#loginPassword");
 let localStorageData = JSON.parse(localStorage.getItem("userSignUp"));
 
+
 function setUserNameFnc(value) {
   let setUserName;
 
@@ -21,33 +22,42 @@ myForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let isLoggedIn = false;
+  let foundUser = false;
+  let userData = null;
 
   if (localStorageData) {
     localStorageData.forEach((ele) => {
-      if (
-        loginEmail.value === ele.emailId &&
-        loginPassword.value === ele.password
-      ) {
+      if (loginEmail.value === ele.emailId && loginPassword.value === ele.password) 
+      {
         isLoggedIn = true;
+        foundUser = true;
+        userData = ele
         window.location = "index.html";
         alert("Login Successfully");
-      }
-      else if(loginEmail.value === "" && loginPassword.value === ""){
-        alert("Enter Login Details")
-      }
-       else if (loginEmail.value !== ele.emailId) {
-        alert("Enter Correct Email Id");
-        return;
-      } else if (loginPassword.value !== ele.password) {
-        alert("Enter Correct Password");
-        return;
+        return
       }
     });
   } else {
     alert("No user data found. Please sign up first.");
+    isLoggedIn = true;
   }
 
-  if (isLoggedIn) {
-    setUserNameFnc(loginEmail.value);
+  if(!foundUser){
+    if(loginEmail.value === "" && loginPassword.value === ""){
+      alert("Enter Login Details")
+    }
+    else if(loginEmail.value !== "" && localStorageData.some((ele)=> ele.emailId !== loginEmail.value)){
+      alert("Enter Correct Email Id")
+    }
+    else if(loginPassword.value !== "" && localStorageData.some((ele)=> ele.password !== loginPassword.value)){
+      alert("Enter Correct Password")
+    }
   }
+
+if(isLoggedIn && userData){
+  
+console.log(userData.inputUserName);
+  setUserNameFnc(userData.inputUserName)
+}
+  
 });

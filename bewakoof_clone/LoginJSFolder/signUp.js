@@ -1,6 +1,7 @@
 const myForm = document.querySelector("form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password")
+const userName = document.querySelector("#inputUserName");
 
 
 function storeCustomerData(value){
@@ -23,6 +24,8 @@ alert("Sign Up Successfully")
 myForm.addEventListener("submit", (event)=>{
     event.preventDefault();
 
+    console.log(userName.textContent);
+
     if(email.value.trim() === "" && password.value.trim() === ""){
         alert("Please enter both email and password")
         return
@@ -40,8 +43,14 @@ myForm.addEventListener("submit", (event)=>{
 
     obj.emailId = email.value;
     obj.password = password.value;
+    obj.inputUserName = userName.value;
+
 
     storeCustomerData(obj)
+
+    email.value = "";
+    password.value = "";
+    userName.value = "";
 })
 
 

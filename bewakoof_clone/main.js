@@ -22,6 +22,8 @@ logoutText.style.display = "none"
 
 userName.textContent = name
 
+// console.log(name);
+
 logoutText.addEventListener("click", (e)=>{
   e.preventDefault()
   localStorage.removeItem("setUserName")
