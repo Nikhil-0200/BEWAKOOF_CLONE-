@@ -8,6 +8,9 @@ const arrowRight = document.getElementById("arrowRight");
 const userName = document.getElementById("userName");
 const loginText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(2)")
 const logoutText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(3)")
+const cartCount = document.querySelector("#cartCount");
+
+
 
 let name = JSON.parse(localStorage.getItem("setUserName"))
 
@@ -70,3 +73,7 @@ Slider1BelowImgDiv.append(Slider1BelowImg);
 Slider1BelowCard.append(Slider1BelowImgDiv, Slider1BelowTitle)
 Slider1Below.append(Slider1BelowCard)
 })
+
+let cartTotal = JSON.parse(localStorage.getItem("cart"))
+
+cartCount.textContent = cartTotal.length

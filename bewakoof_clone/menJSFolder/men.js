@@ -146,3 +146,8 @@ data.listedData().forEach((filterHead) => {
 
   filterDiv.append(heading);
 });
+
+const cartCount = document.querySelector("#cartCount");
+let cartTotal = JSON.parse(localStorage.getItem("cart"))
+
+cartCount.textContent = cartTotal.length

@@ -109,15 +109,25 @@ nav {
   cursor: pointer;
 }
 
+#cartSpan{
+  position: relative;
+}
+/* 
+#navSecondDiv > div:nth-child(2) > #cartImage {
+  position: relative;
+} */
+
+ #cartCount{
+  position: absolute;
+  top: 0%;
+  left: -20%;
+}
+
 #navSecondDiv > div:nth-child(2) > h2 {
   border-left: 1.5px solid black;
   padding-left: 1pc;
   cursor: pointer;
 }
-
-/* #navSecondDiv > div:nth-child(2) > a:nth-child(2){
-  background-color: red;
-} */
 
 #hoverDiv{
   width: 90%;
@@ -536,4 +546,14 @@ nav {
 
 #menNav > h2 > a{
   text-decoration-line: none;
+}
+
+#cartCount{
+  background-color: rgb(236, 236, 21);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bolder;
+  padding: 2px;
 }

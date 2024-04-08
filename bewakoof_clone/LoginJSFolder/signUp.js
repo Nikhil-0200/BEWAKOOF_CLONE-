@@ -53,5 +53,10 @@ myForm.addEventListener("submit", (event)=>{
     userName.value = "";
 })
 
+const cartCount = document.querySelector("#cartCount");
+let cartTotal = JSON.parse(localStorage.getItem("cart"))
+
+cartCount.textContent = cartTotal.length
+
 
 

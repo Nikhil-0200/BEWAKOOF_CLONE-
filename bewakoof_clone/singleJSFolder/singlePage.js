@@ -8,10 +8,25 @@ const id = params.get("id");
 const singleHeading = document.getElementById("singleHeading");
 const leftSection = document.getElementById("leftSection");
 
+function setCart(value) {
+  let cart;
+
+  if (localStorage.getItem("cart")) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+  } else {
+    cart = [];
+  }
+
+  cart.push(value);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 async function singleData() {
   let res = await fetch(`${API}?id=${id}`);
   let finalData = await res.json();
   console.log(finalData.data);
+
+  // fetchData(finalData.data)
 
   finalData.data.forEach((ele) => {
     singleHeading.textContent = ele.productName;
@@ -56,11 +71,11 @@ async function singleData() {
     let rightSection = document.getElementById("rightSection");
 
     let rightFirstUprDiv = document.createElement("div");
-    rightFirstUprDiv.id = "rightFirstUprDiv"
+    rightFirstUprDiv.id = "rightFirstUprDiv";
 
     let brandName = document.createElement("h1");
     brandName.textContent = ele.brandName;
-    brandName.id = "brandName"
+    brandName.id = "brandName";
 
     let productName1 = document.createElement("h2");
     productName1.textContent = ele.productName;
@@ -89,50 +104,53 @@ async function singleData() {
 
     let subTitle = document.createElement("h4");
     subTitle.textContent = ele.subTitle;
-    subTitle.id = "subTitle"
+    subTitle.id = "subTitle";
 
     let rightSecondUprDiv = document.createElement("p");
-    rightSecondUprDiv.textContent = "TriBe members get an extra discount of ₹70 and FREE shipping.Learn more";
-    rightSecondUprDiv.id = "rightSecondUprDiv"
-
+    rightSecondUprDiv.textContent =
+      "TriBe members get an extra discount of ₹70 and FREE shipping.Learn more";
+    rightSecondUprDiv.id = "rightSecondUprDiv";
 
     let sizeDiv = document.createElement("div");
     sizeDiv.id = "sizeDiv";
 
     let sizeDivHeading = document.createElement("div");
-    sizeDivHeading.id = "sizeDivHeading"
+    sizeDivHeading.id = "sizeDivHeading";
 
     let sizeHeading = document.createElement("h3");
     sizeHeading.textContent = "SELECT SIZE";
     sizeHeading.className = "sizeHead";
 
     let sizeGuide = document.createElement("h3");
-    sizeGuide.textContent = "Size Guide"
-    sizeGuide.className = "sizeHead"
+    sizeGuide.textContent = "Size Guide";
+    sizeGuide.className = "sizeHead";
 
-  let sizeArr = ["S", "M", "L", "XL", "2XL"];
+    let sizeArr = ["S", "M", "L", "XL", "2XL"];
 
-  let btnDiv = document.createElement("div");
-  btnDiv.id = "btnDiv"
+    let btnDiv = document.createElement("div");
+    btnDiv.id = "btnDiv";
 
-  sizeArr.forEach((ele)=>{
-    let sizeBtn = document.createElement("button");
+    sizeArr.forEach((ele) => {
+      let sizeBtn = document.createElement("button");
 
-    sizeBtn.textContent = ele
+      sizeBtn.textContent = ele;
 
-    btnDiv.append(sizeBtn)
-  })
+      btnDiv.append(sizeBtn);
+    });
 
-  let addToCartDiv = document.createElement("div");
-  addToCartDiv.id = "addToCartDiv"
+    let addToCartDiv = document.createElement("div");
+    addToCartDiv.id = "addToCartDiv";
 
-  let addToCartBtn = document.createElement("button");
-  addToCartBtn.textContent = "ADD TO BAG"
+    let addToCartBtn = document.createElement("button");
+    addToCartBtn.id = "addToCartBtn";
+    addToCartBtn.textContent = "ADD TO BAG";
 
-  let wishListBtn = document.createElement("button");
-  wishListBtn.textContent = "WISHLIST"
+    addBtn(addToCartBtn, ele);
 
-  addToCartDiv.append(addToCartBtn, wishListBtn)
+    let wishListBtn = document.createElement("button");
+    wishListBtn.textContent = "WISHLIST";
+
+    addToCartDiv.append(addToCartBtn, wishListBtn);
 
     rightFirstUprDiv.append(
       brandName,
@@ -140,12 +158,28 @@ async function singleData() {
       ratingSpan,
       price,
       priceSub,
-      subTitle,
+      subTitle
     );
 
-    sizeDivHeading.append(sizeHeading, sizeGuide)
-    sizeDiv.append(sizeDivHeading, btnDiv, addToCartDiv)
+    sizeDivHeading.append(sizeHeading, sizeGuide);
+    sizeDiv.append(sizeDivHeading, btnDiv, addToCartDiv);
     rightSection.append(rightFirstUprDiv, rightSecondUprDiv, sizeDiv);
   });
 }
+
 singleData();
+
+// function fetchData(data){
+
+// }
+
+function addBtn(value, data) {
+  value.addEventListener("click", () => {
+    setCart(data);
+  });
+}
+
+const cartCount = document.querySelector("#cartCount");
+let cartTotal = JSON.parse(localStorage.getItem("cart"))
+
+cartCount.textContent = cartTotal.length  
