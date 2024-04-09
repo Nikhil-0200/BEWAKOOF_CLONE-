@@ -29,3 +29,92 @@ main{
   display: flex;
   flex-direction: column;
 }
+
+#cartSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 100px;
+}
+
+#cartContent{
+  /* border: 2px solid black; */
+  display: flex;
+  gap: 15px;
+}
+
+#cartContentLeft{
+  /* border: 2px solid red; */
+  width: 60%;
+}
+
+#cartContentRight{
+  /* border: 2px solid blue; */
+  width: 40%;
+}
+
+#top{
+  background-color: #FCFFEE;
+  padding: 17px 10px;
+  font-size: small;
+}
+
+#container{
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  border-radius: 6px;
+  margin: 20px 0px;
+}
+
+#cartCard{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#cardLeft{
+  /* border: 2px solid red; */
+  width: 90%;
+} 
+
+/* #cardRight{
+  border: 2px solid black;
+} */
+
+#cardImgDiv{
+  width: 110px;
+  height: 140px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#cardImgDiv > img{
+  width: 100%;
+  height: 100%;
+}
+
+#cardBtnDiv{
+  width: 100%;
+  /* background-color: red;   */
+  display: flex;
+  justify-content: center;
+}
+
+#cardBtnDiv > button:nth-child(1){
+  width: 40%;
+  border: none;
+  border-top: 2px solid #e4e3e3;
+  border-right: 2px solid #e4e3e3;
+  background-color: white;
+  padding: 20px;
+  
+}
+
+#cardBtnDiv > button:nth-child(2){
+  width: 55%;
+  border: none;
+  border-top: 2px solid #e4e3e3;
+  background-color: white;
+}

@@ -151,3 +151,8 @@ const cartCount = document.querySelector("#cartCount");
 let cartTotal = JSON.parse(localStorage.getItem("cart"))
 
 cartCount.textContent = cartTotal.length
+
+let cartImage = document.querySelector("#cartImage");
+cartImage.addEventListener("click", ()=>{
+    window.location.href = "cart.html"
+})
