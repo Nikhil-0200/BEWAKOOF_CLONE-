@@ -29,7 +29,8 @@ localStorageItem.forEach((element) => {
   cardPrice.id = "cardPrice";
   cardPrice.textContent = `₹${element.price.replace(/₹/g, "")}`;
 
-  // totalMRP(element.price.replace(/₹/g, ""))
+  let cardDropDown = document.createElement("div");
+  cardDropDown.id = "cardDropDown"; 
 
   let quantityDropDown = count();
 
@@ -52,7 +53,8 @@ localStorageItem.forEach((element) => {
 
   cardBtnDiv.append(cardRemoveBtn, cardAddToWishBtn);
   cardImgDiv.append(cardImg);
-  cardLeft.append(cardProduct, cardPrice, sizeDropDown, quantityDropDown);
+  cardDropDown.append(sizeDropDown, quantityDropDown)
+  cardLeft.append(cardProduct, cardPrice, cardDropDown);
   cardRight.append(cardImgDiv);
   cartCard.append(cardLeft, cardRight);
   container.append(cartCard, cardBtnDiv);
@@ -64,40 +66,38 @@ let data = JSON.parse(localStorage.getItem("setUserName"));
 userNameSpan.textContent = data.toString();
 
 function count() {
+  let quantityDiv = document.createElement("div");
+  quantityDiv.id = "quantityDiv";
+  let quantityLabel = document.createElement("label");
+  quantityLabel.id = "quantityLabel"
+  quantityLabel.textContent = "Qty: "
   let quantity = document.createElement("select");
   quantity.id = "quantity";
 
-  let arr = [
-    "Qty: 1",
-    "Qty: 2",
-    "Qty: 3",
-    "Qty: 4",
-    "Qty: 5",
-    "Qty: 6",
-    "Qty: 7",
-    "Qty: 8",
-    "Qty: 9",
-    "Qty: 10",
-  ];
-
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 1; i <=10; i++) {
     let option = document.createElement("option");
-    option.textContent = arr[i];
+    option.textContent = i;
     quantity.append(option);
+    quantityDiv.append(quantityLabel, quantity)
   }
-  return quantity;
+  return quantityDiv;
 }
 
 function size() {
   let arr = [
-    "Size: S",
-    "Size: M",
-    "Size: L",
-    "Size: XL",
-    "Size: 2XL",
-    "Size: 3XL",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL",
   ];
 
+  let sizeDiv = document.createElement("div");
+  sizeDiv.id = "sizeDiv";
+  let sizeLabel = document.createElement("label");
+  sizeLabel.id = "sizeLabel";
+  sizeLabel.textContent = "Size"
   let sizeSelect = document.createElement("select");
   sizeSelect.id = "sizeSelect";
 
@@ -105,9 +105,10 @@ function size() {
     let sizeOption = document.createElement("option");
     sizeOption.textContent = ele;
     sizeSelect.append(sizeOption);
+    sizeDiv.append(sizeLabel, sizeSelect)
   });
 
-  return sizeSelect;
+  return sizeDiv;
 }
 
 function totalMRP(){
