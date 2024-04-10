@@ -53,12 +53,16 @@ main{
 #cartContentRight{
   /* border: 2px solid blue; */
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #top{
   background-color: #FCFFEE;
   padding: 17px 10px;
   font-size: small;
+  border-radius: 4px;
 }
 
 #container{
@@ -77,6 +81,7 @@ main{
 #cardLeft{
   /* border: 2px solid red; */
   width: 90%;
+  line-height: 35px;
 } 
 
 /* #cardRight{
@@ -117,4 +122,131 @@ main{
   border: none;
   border-top: 2px solid #e4e3e3;
   background-color: white;
+}
+
+
+#cartContentRightTop{
+  background-color: #FDD835;
+  padding: 17px 10px;
+  font-size: medium;
+  border-radius: 4px;
+}
+
+#cartContentRightTop > p > span{
+  font-weight: bolder;
+}
+
+#cartContentRightBottom{
+  border: 1px solid rgba(0, 0, 0, 0.189);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#Redeem{
+  display: flex;
+  justify-content: space-between;
+  background-color: #EBEBEB;
+  padding: 9px 10px;
+  font-size: small;
+  border-radius: 5px;
+  margin: 7px;
+}
+
+#rateDiv > p{
+  width: 100%;
+  background-color: #EBEBEB;
+  font-size: small;
+  padding: 13px 0px 13px 16px;
+} 
+
+#rates{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.189);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: small;
+  padding: 20px 16px;
+}
+
+#rates > div{
+  display: flex;
+  justify-content: space-between;
+}
+
+#totalDiv > div{
+/* background-color: red; */
+display: flex;
+justify-content: space-between;
+padding: 12px 16px;
+font-size: small;
+}
+
+#totalDiv > div > span{
+  /* background-color: #EBEBEB; */
+  display: flex;
+  flex-direction: column;
+}
+
+#totalDiv > div > span > span{
+  /* background-color: #FDD835; */
+  font-size: medium;
+  font-weight: bold;
+}
+
+#totalDiv > div > button{
+  background-color: #42A2A2;
+  padding: 10px 100px;
+  color: white;
+  font-size: large;
+  border-radius: 8px;
+  border: none;
+}
+
+#rateIcon{
+  padding: 10px;
+}
+
+#rateIcon > #iconCard{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+#rateIcon > #iconCard > .iconDiv{
+  width: 40px;
+  height: 40px;
+}
+
+#rateIcon > #iconCard > .iconDiv > img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  /* margin: 10px; */
+}
+
+#rateIcon > #iconCard > p{
+  font-size: xx-small;
+}
+
+#quantity{
+  font-size: small;
+  padding: 4px;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.189);
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+#sizeSelect{
+  font-size: small;
+  padding: 4px;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.189);
+  outline: none;
+  border-radius: 3px;
+  margin-right: 20px;
 }
