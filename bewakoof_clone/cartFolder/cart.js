@@ -8,7 +8,8 @@ cartHeading.textContent = localStorageItem.length;
 
 console.log(localStorageItem);
 
-localStorageItem.forEach((element) => {
+
+localStorageItem.forEach((element, i) => {
   let container = document.createElement("div");
   container.id = "container";
 
@@ -33,6 +34,16 @@ localStorageItem.forEach((element) => {
   cardDropDown.id = "cardDropDown"; 
 
   let quantityDropDown = count();
+
+
+  quantityDropDown.querySelector("select").addEventListener("change", function(){
+    let selectQtyValue = parseInt(this.value);
+    let itemPrice = parseFloat(element.price.replace(/₹/g, ""));
+    let totalPrice = selectQtyValue * itemPrice;
+    cardPrice.textContent = `₹${totalPrice.toFixed(0)}`; 
+    
+  })
+
 
   let sizeDropDown = size();
 
@@ -80,6 +91,7 @@ function count() {
     quantity.append(option);
     quantityDiv.append(quantityLabel, quantity)
   }
+
   return quantityDiv;
 }
 
@@ -111,13 +123,15 @@ function size() {
   return sizeDiv;
 }
 
-function totalMRP(){
- let res = localStorageItem.reduce((acc, curr)=> acc + +(curr.price.replace(/₹/g, "")), 0)
- return res
+function totalMRP(value){
+let res = value.reduce((acc, curr)=> acc + parseFloat(curr.price.replace(/₹/g, "")), 0)
+return res
 }
 
-let totalMRPspan = document.getElementById("totalMRPspan");
-totalMRPspan.textContent = `₹${totalMRP()}`
+
+  let totalMRPspan = document.getElementById("totalMRPspan");
+totalMRPspan.textContent = `₹${totalMRP(localStorageItem)}`
+
 
 
 function gst(value){
@@ -126,14 +140,14 @@ function gst(value){
 }
 
 let gstAmtSpan = document.getElementById("gstAmtSpan");
-gstAmtSpan.textContent = `${gst(totalMRP())}`
+gstAmtSpan.textContent = `${gst(totalMRP(localStorageItem))}`
 
 function subTotal(value1, value2){
 let res = value1 + value2
 return res
 }
 
-let subTotalValue = subTotal(totalMRP(), gst(totalMRP()))
+let subTotalValue = subTotal(totalMRP(localStorageItem), gst(totalMRP(localStorageItem)))
 
 let subtotalSpan = document.getElementById("subtotalSpan");
 subtotalSpan.textContent = `₹${(subTotalValue).toFixed(2)}`
