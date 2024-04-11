@@ -4,7 +4,7 @@ let bottom = document.querySelector("#bottom");
 
 let localStorageItem = JSON.parse(localStorage.getItem("cart"));
 
-cartHeading.textContent = localStorageItem.length;
+cartHeading.innerText = localStorageItem.length;
 
 
 
@@ -42,6 +42,7 @@ localStorageItem.forEach((element, i) => {
       let totalPrice = selectQtyValue * itemPrice;
       cardPrice.textContent = `₹${totalPrice.toFixed(0)}`;
     });
+
 
   let sizeDropDown = size();
 

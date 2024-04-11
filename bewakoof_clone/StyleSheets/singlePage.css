@@ -41,6 +41,22 @@ main{
     /* border: 2px solid red; */
 }
 
+
+@media all and (min-width:500px) and (max-width:1024px){
+    main{
+        position: relative;
+        padding: 0px 40px;
+    }    
+}
+
+@media all and (min-width:0px) and (max-width:500px){
+    main{
+        position: relative;
+        padding: 0px 20px;
+    }    
+}
+
+
 #bigImageDiv{
     width: 70%;
 }
@@ -68,12 +84,13 @@ main{
 
 #rightSection{
     width: fit-content;
-    /* border: 2px solid blueviolet;    */
 }
 
 #rightFirstUprDiv{
     line-height: 27px;
 }
+
+
 
 #brandName{
     font-size: large;
@@ -142,6 +159,58 @@ main{
     margin: 30px 0px;
 }
 
+
+@media all and (min-width: 500px) and (max-width: 900px){
+    #singleMain{
+        position: relative;
+        top: 150px; 
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    #leftSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    #multipleSmallImgDiv{
+        width: 100%;
+        margin: auto;
+    }
+    #smallImageDiv{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+    }
+    #bigImageDiv{
+        width: 100%;
+    }
+
+    #rightSection{
+        width: 100%;
+        /* border: 2px solid blueviolet;    */
+        overflow: hidden;
+    }
+    #rightSecondUprDiv{
+        width: 100%;
+        font-size: small;
+        padding: 15px 10px 15px 0px;
+        border-top: 4px solid #EEEEEE;
+        border-bottom: 4px solid #EEEEEE;
+        margin: 30px 0px;
+    }
+    
+}
+
+
 #sizeDiv{
     display: flex;
     flex-direction: column;
@@ -168,6 +237,68 @@ main{
     border-radius: 7px;
     border: 1px solid black;
 }
+
+
+@media all and (min-width: 0px) and (max-width: 500px){
+    #singleMain{
+        position: relative;
+        top: 150px; 
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        /* background-color: red; */
+    }
+    #leftSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    #multipleSmallImgDiv{
+        width: 100%;
+        margin: auto;
+    }
+    #smallImageDiv{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
+    }
+    #bigImageDiv{
+        width: 100%;
+    }
+
+    #rightSection{
+        width: 100%;
+        /* border: 2px solid blueviolet;    */
+        overflow: hidden;
+    }
+    #rightSecondUprDiv{
+        width: 100%;
+        font-size: small;
+        padding: 15px 10px 15px 0px;
+        border-top: 4px solid #EEEEEE;
+        border-bottom: 4px solid #EEEEEE;
+        margin: 30px 0px;
+    }
+    #btnDiv > button{
+        width: 14%;
+        padding: 15px;
+        margin-right: 10px;
+        background-color: white;
+        border-radius: 7px;
+        border: 1px solid black;
+    }
+    
+    
+}
+
 
 #addToCartDiv{
     display: flex;

@@ -24,9 +24,6 @@ function setCart(value) {
 async function singleData() {
   let res = await fetch(`${API}?id=${id}`);
   let finalData = await res.json();
-  console.log(finalData.data);
-
-  // fetchData(finalData.data)
 
   finalData.data.forEach((ele) => {
     singleHeading.textContent = ele.productName;
