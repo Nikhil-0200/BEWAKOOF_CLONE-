@@ -1,84 +1,136 @@
 @font-face {
-    font-family: helvetica;
-    src: url(../assets/FontFolder/Helvetica.ttf);
-  }
-  
-  @font-face {
-    font-family: monsorate;
-    src: url(../assets/FontFolder/Montserrat-Light.ttf);
-  }
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: monsorate;
+  font-family: helvetica;
+  src: url(../assets/FontFolder/Helvetica.ttf);
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+@font-face {
+  font-family: monsorate;
+  src: url(../assets/FontFolder/Montserrat-Light.ttf);
 }
 
-main{
-    position: relative;
-    top: 20%;
-    padding: 0px 50px;
-    /* background-color: red; */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: monsorate;
 }
 
-#loginSection{
-    font-size: medium;
-    text-align: center;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#loginSection > h1{
-    font-weight: 600;
+main {
+  position: relative;
+  top: 20%;
+  padding: 0px 50px;
+  /* background-color: red; */
 }
 
-#loginSection > h3{
-font-weight: 100;
-padding: 30px 0px 50px 0px;
+#loginSection {
+  font-size: medium;
+  text-align: center;
 }
 
-form{
+#loginSection > h1 {
+  font-weight: 600;
+}
+
+#loginSection > h3 {
+  font-weight: 100;
+  padding: 30px 0px 50px 0px;
+}
+
+form {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  gap: 70px;
+}
+
+@media all and (min-width: 700px) and (max-width: 1024px) {
+  form {
     /* background-color: red; */
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
     margin: auto;
     gap: 70px;
+  }
 }
 
-form > div{
+@media all and (min-width: 500px) and (max-width: 700px) {
+  form {
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: auto;
     gap: 70px;
+  }
+
+  
+main {
+    position: relative;
+    top: 20%;
+    padding: 0px 30px;
+    /* background-color: red; */
+  }
+  
 }
 
-form > div > input{
-    font-size: large;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    line-height: 30px;
+@media all and (min-width: 200px) and (max-width: 500px) {
+    form {
+      /* background-color: red; */
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      gap: 70px;
+    }
+
+    
+main {
+    position: relative;
+    top: 20%;
+    padding: 0px 10px;
+    /* background-color: red; */
+  }
+  
+  }
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+form > div > input {
+  font-size: large;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  line-height: 30px;
 }
 
 form > #forgetDiv {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 form > #forgetDiv > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-form > button{
-    padding: 18px 0px;
-    font-size: larger;
-    background-color: #9f9f9f;
-    border-radius: 8px;
-    color: white;
-    border: none;
+form > button {
+  padding: 18px 0px;
+  font-size: larger;
+  background-color: #9f9f9f;
+  border-radius: 8px;
+  color: white;
+  border: none;
 }

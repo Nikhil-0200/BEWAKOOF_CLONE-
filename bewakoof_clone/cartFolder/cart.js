@@ -6,8 +6,6 @@ let localStorageItem = JSON.parse(localStorage.getItem("cart"));
 
 cartHeading.innerText = localStorageItem.length;
 
-
-
 localStorageItem.forEach((element, i) => {
   let container = document.createElement("div");
   container.id = "container";
@@ -43,7 +41,6 @@ localStorageItem.forEach((element, i) => {
       cardPrice.textContent = `₹${totalPrice.toFixed(0)}`;
     });
 
-
   let sizeDropDown = size();
 
   let cardImgDiv = document.createElement("div");
@@ -58,6 +55,12 @@ localStorageItem.forEach((element, i) => {
   let cardRemoveBtn = document.createElement("button");
   cardRemoveBtn.textContent = "Remove";
 
+  cardRemoveBtn.addEventListener("click", () => {
+    localStorageItem.splice(i, 1);
+    cartHeading.innerText = localStorageItem.length;
+    localStorage.setItem("cart", JSON.stringify(localStorageItem));
+    container.remove();
+  });
   let cardAddToWishBtn = document.createElement("button");
   cardAddToWishBtn.textContent = "Move to Wishlist";
 

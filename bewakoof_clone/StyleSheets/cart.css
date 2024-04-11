@@ -45,6 +45,7 @@ main{
   gap: 15px;
 }
 
+
 #cartContentLeft{
   /* border: 2px solid red; */
   width: 60%;
@@ -87,6 +88,27 @@ main{
 /* #cardRight{
   border: 2px solid black;
 } */
+@media all and (min-width: 0px) and (max-width:1050px){
+  #cartContent{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #cartContentLeft{
+    width: 100%;
+  }
+
+  #cartContentRight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
 
 #cardImgDiv{
   width: 110px;
@@ -201,6 +223,34 @@ font-size: small;
   border-radius: 8px;
   border: none;
 }
+
+@media all and (min-width:0px) and (max-width: 500px){
+  main{
+    position: relative;
+    padding: 0px 20px;
+}
+
+#totalDiv > div > button{
+  background-color: #42A2A2;
+  padding: 10px 70px;
+  color: white;
+  font-size: large;
+  border-radius: 8px;
+  border: none;
+}
+
+#cartSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 120px;
+}
+
+
+}
+
 
 #rateIcon{
   padding: 10px;
