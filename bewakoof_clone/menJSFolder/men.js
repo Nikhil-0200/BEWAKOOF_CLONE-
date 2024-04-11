@@ -96,8 +96,7 @@ async function fetchData() {
         let priceB = Number(b.price.replace(/[^\d.-]/g, ""));
         return priceA - priceB;
       });
-
-    console.log(sortData);
+      
     renderData(sortData);
   });
 }
