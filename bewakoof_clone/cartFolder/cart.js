@@ -1,7 +1,7 @@
 let userNameSpan = document.querySelector("#userNameSpan");
 let cartHeading = document.querySelector("#cartHeading");
 let bottom = document.querySelector("#bottom");
-
+let setUserNameSideNav = document.getElementById("setUserNameSideNav");
 
 const sideLoginText = document.querySelector(
   "#sideBottom > a:nth-child(1)"
@@ -23,6 +23,8 @@ if (nameData) {
 
   sideLogoutText.style.display = "none";
 }
+
+setUserNameSideNav.textContent = nameData
 
 sideLogoutText.addEventListener("click", (e) => {
   e.preventDefault();

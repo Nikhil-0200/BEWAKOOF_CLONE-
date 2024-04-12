@@ -5,24 +5,18 @@ const Slider1 = document.getElementById("Slider1");
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
 const userName = document.getElementById("userName");
-const loginText = document.querySelector(
-  "#navSecondDiv > div:nth-child(2) > a:nth-child(2)"
-);
-const sideLoginText = document.querySelector(
-  "#sideBottom > a:nth-child(1)"
-)
+const loginText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(2)");
+const sideLoginText = document.querySelector("#sideBottom > a:nth-child(1)")
 
-const sideLogoutText = document.querySelector(
-  "#sideBottom > a:nth-child(2)"
-)
+const sideLogoutText = document.querySelector("#sideBottom > a:nth-child(2)")
 
-const logoutText = document.querySelector(
-  "#navSecondDiv > div:nth-child(2) > a:nth-child(3)"
-);
+const logoutText = document.querySelector("#navSecondDiv > div:nth-child(2) > a:nth-child(3)");
 const cartCount = document.querySelector("#cartCount");
 const hamburger = document.querySelector("#navSecondDiv > div > span:nth-child(1)");
 const above = document.querySelector("#above");
 const overlay = document.querySelector("#overlay")
+let setUserNameSideNav = document.getElementById("setUserNameSideNav");
+
 
 hamburger.addEventListener("click", ()=>{
   above.style.display = "block"
@@ -47,6 +41,7 @@ if (name) {
 }
 
 userName.textContent = name;
+setUserNameSideNav.textContent = name
 
 
 logoutText & sideLogoutText.addEventListener("click", (e) => {
