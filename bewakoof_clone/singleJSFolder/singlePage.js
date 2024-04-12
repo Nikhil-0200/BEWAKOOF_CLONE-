@@ -170,11 +170,21 @@ singleData();
 
 // }
 
+console.log("hi");
+
 function addBtn(value, data) {
   value.addEventListener("click", () => {
-    setCart(data);
-    alert("Item Added To Cart")
+let data1 = JSON.parse(localStorage.getItem("cart"))
+let checkAvailability = data1.some(ele => ele.id === data.id);
+
+    if(!checkAvailability){
+      setCart(data);
+      alert("Item Added To Cart")
     window.location.reload()
+    }
+    else{
+      alert("Item is already present in cart")
+    }
   });
 }
 

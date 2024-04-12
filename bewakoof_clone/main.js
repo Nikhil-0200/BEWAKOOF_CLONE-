@@ -44,7 +44,14 @@ userName.textContent = name;
 setUserNameSideNav.textContent = name
 
 
-logoutText & sideLogoutText.addEventListener("click", (e) => {
+logoutText.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("setUserName");
+  window.location.href = "signUp.html";
+  alert("Logout Successfully");
+});
+
+sideLogoutText.addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.removeItem("setUserName");
   window.location.href = "signUp.html";
