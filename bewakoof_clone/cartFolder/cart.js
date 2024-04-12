@@ -2,9 +2,38 @@ let userNameSpan = document.querySelector("#userNameSpan");
 let cartHeading = document.querySelector("#cartHeading");
 let bottom = document.querySelector("#bottom");
 
+
+const sideLoginText = document.querySelector(
+  "#sideBottom > a:nth-child(1)"
+)
+
+const sideLogoutText = document.querySelector(
+  "#sideBottom > a:nth-child(2)"
+)
+
+
+let nameData = JSON.parse(localStorage.getItem("setUserName"));
+
+if (nameData) {
+  sideLoginText.style.display = "none"
+  sideLogoutText.style.display = "block";
+} else {
+
+  sideLoginText.style.display = "block"
+
+  sideLogoutText.style.display = "none";
+}
+
+sideLogoutText.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("setUserName");
+  window.location.href = "signUp.html";
+  alert("Logout Successfully");
+});
+
 let localStorageItem = JSON.parse(localStorage.getItem("cart"));
 
-cartHeading.innerText = localStorageItem.length;
+cartHeading.textContent = localStorageItem.length;
 
 localStorageItem.forEach((element, i) => {
   let container = document.createElement("div");
@@ -60,6 +89,7 @@ localStorageItem.forEach((element, i) => {
     cartHeading.innerText = localStorageItem.length;
     localStorage.setItem("cart", JSON.stringify(localStorageItem));
     container.remove();
+    window.location.reload();
   });
   let cardAddToWishBtn = document.createElement("button");
   cardAddToWishBtn.textContent = "Move to Wishlist";
@@ -149,3 +179,9 @@ let subTotalValue = subTotal(
 
 let subtotalSpan = document.getElementById("subtotalSpan");
 subtotalSpan.textContent = `₹${subTotalValue.toFixed(2)}`;
+
+document.getElementById("finalTotal").textContent = `₹${subTotalValue.toFixed(
+  0
+)}`;
+
+

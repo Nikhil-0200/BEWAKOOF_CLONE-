@@ -1,5 +1,4 @@
 import { starLine } from "../assets/IconFolder/index";
-import {isLoggedIn} from "../LoginJSFolder/login"
 
 let API =
   "https://script.google.com/macros/s/AKfycbxCG90fekKd3afSynvi3JoCdyZG3nku--QWil_XpEQD_fMRjdY7f2ey6uUAgTHnQKdlYA/exec";
@@ -186,11 +185,6 @@ cartCount.textContent = cartTotal.length
 
 let cartImage = document.querySelector("#cartImage");
 cartImage.addEventListener("click", ()=>{
-  if(window.isLoggedIn){
     window.location.href = "cart.html"
-  }
-  else{
-    alert("Please log in to view your cart.")
-  }
 })
   

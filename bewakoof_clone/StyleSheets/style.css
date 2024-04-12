@@ -107,6 +107,7 @@ nav {
 
 #navSecondDiv > div:nth-child(2) > img {
   cursor: pointer;
+  
 }
 
 #cartSpan{
@@ -142,6 +143,12 @@ nav {
   overflow: auto;
   z-index: 15;
   border: 1px solid black;
+}
+
+@media all and (min-width: 0px) and (max-width: 1024px){
+  #hoverDiv{
+    display: none;
+  }
 }
 
 #hoverDiv::-webkit-scrollbar{
@@ -376,11 +383,11 @@ nav {
 }
 
 @media all and (min-width: 600px) and (max-width: 1024px) {
-  #navSecondDiv > div > span:nth-child(2) > img:first-child {
+  #navSecondDiv > div > span:nth-child(2) > a > img:first-child {
     display: none;
   }
 
-  #navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
+  #navSecondDiv > div > span:nth-child(2) > a > img:nth-child(2) {
     display: block;
   }
 
@@ -428,14 +435,15 @@ nav {
   #firstDiv {
     display: none;
   }
-  #navSecondDiv > div > span:nth-child(2) > img:first-child {
+  #navSecondDiv > div > span:nth-child(2) > a > img:first-child {
     display: none;
+  }
+
+  #navSecondDiv > div > span:nth-child(2) > a > img:nth-child(2) {
+    display: block;
   }
   #navSecondDiv > div > span:nth-child(3) {
     display: none;
-  }
-  #navSecondDiv > div > span:nth-child(2) > img:nth-child(2) {
-    display: block;
   }
 
   #navSecondDiv > div > span:nth-child(1) {
@@ -556,4 +564,105 @@ nav {
   text-align: center;
   font-weight: bolder;
   padding: 2px;
+}
+
+@media all and (min-width: 0px) and (max-width: 1024px){
+  #navSecondDiv > div:nth-child(2) > a:nth-child(2){
+    color: white;
+  }
+  
+  #navSecondDiv > div:nth-child(2) > a:nth-child(3){
+    color: white;
+  }
+  #userName{
+    color: white;
+  }
+}
+
+
+
+#above{
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  position: absolute;
+  font-family: monsorate;
+  display: none;
+}
+
+#overlay{
+  background-color: black;
+  opacity: .5;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 12;
+}
+
+#sideNav{
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 1;
+  z-index: 13;
+}
+
+@media all and (min-width: 400px) and (max-width: 550px){
+  #sideNav{
+    width: 60vw;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 400px){
+  #sideNav{
+    width: 70vw;
+  }
+}
+
+#sideTop{
+  font-size: larger;
+  padding: 20px;
+  border-bottom: 2px solid #eeeeee ;
+}
+
+#sideMiddle{
+  display: flex;
+  flex-direction: column;
+  padding: 20px ;
+}
+
+#sideMiddle > a{
+  padding: 20px 0px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sideNamImgDiv{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+#sideNamImgDiv > img{
+  width: 100%;
+  height: 100%;
+}
+
+#sideBottom{
+  background-color: #F3F3F3;
+  padding: 20px;
+}
+
+#sideBottom > a > h2{
+  font-size: medium;
+  padding: 20px 0px;
+}
+
+#sideBottom > a:nth-child(1),
+#sideBottom > a:nth-child(2)
+{
+  text-decoration: none;
 }
